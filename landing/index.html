@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <link rel="stylesheet" href="styles.css" id="main-stylesheet">
+    <title>InnovateHub - Welcome</title>
+</head>
+<body>
+    <header class="">
+        <nav>
+            <div class="logo"><h1>InnovateHub</h1></div>
+            <div class="nav-buttons" >
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Services</a>
+                <a href="#">Contact</a>
+                
+            <a href="#" class="login-button" id="as">Log In</a>
+            <a href="#" class="signup-button" id="as">Sign Up</a>
+            </div>
+        </nav>
+        <div class="theme-toggle">
+            <label class="switch">
+                <input type="checkbox" id="theme-toggle-checkbox">
+                <span class="slider round"></span>
+            </label>
+        </div>
+        
+    </header>
+    
+    <section class="hero">
+        <h1>Welcome to InnovateHub</h1>
+        <p>Your gateway to innovation and creativity.</p>
+        <a href="https://t-hub.co/our-programs" class="cta-button">Learn More</a>
+    </section>
+
+    <!-- More sections can be added here -->
+
+    <footer>
+        <p>&copy; 2023 InnovateHub. All rights reserved.</p>
+    </footer>
+    <script>
+        const themeToggleCheckbox = document.getElementById('theme-toggle-checkbox');
+        const mainStylesheet = document.getElementById('main-stylesheet');
+        const darkThemeStylesheet = document.getElementById('dark-theme-stylesheet');
+
+        themeToggleCheckbox.addEventListener('change', () => {
+            if (themeToggleCheckbox.checked) {
+                darkThemeStylesheet.removeAttribute('disabled');
+                mainStylesheet.setAttribute('disabled', true);
+            } else {
+                mainStylesheet.removeAttribute('disabled');
+                darkThemeStylesheet.setAttribute('disabled', true);
+            }
+        });
+    </script>
+</body>
+</html>
